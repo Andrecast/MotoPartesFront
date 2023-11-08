@@ -1,0 +1,29 @@
+<div class="card border-success mb-3">
+    <div class="card-header">Movimientos</div>
+    <div class="card-body text-success">
+      <h5 class="card-title">Listado de compras y devoluciones a proveedor</h5>
+      
+      <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Compra/Devolución</th>
+                <th>Proveedor</th>
+                <th>Almacén</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let provmovem of provMovements">
+            <td>{{provmovem.productName}}</td>
+            <td>{{provmovem.amount}}</td>
+            <td>{{provmovem.status}}</td>
+            <td>{{provmovem.providerName}}</td>
+            <td>{{provmovem.storeName}}</td>
+            <td>{{provmovem.createAt}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
